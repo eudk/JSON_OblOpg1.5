@@ -24,6 +24,7 @@ while True:
     responseJson = clientSocket.recv(1024).decode()
     response = json.loads(responseJson)
     print("Server", serverIp,": " ,response.get("result"))
+    print("JSON Format:", responseJson)
 
     another = input("Do you want to keep going? (yes/no): ")
     if another.lower() != 'yes':
